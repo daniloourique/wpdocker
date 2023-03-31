@@ -16,4 +16,4 @@ spec:
         - name: wpdocker 
           image: aksacr0001.azurecr.io/wpdocker
           ports:
-          - containerPort: 80
+          - containerPort: 8080

@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: wpdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wpdocker
+  template:
+    metadata:
+      labels:
+        app: wpdocker 
+    spec:
+      containers:
+        - name: wpdocker 
+          image: aksacr0001.azurecr.io/wpdocker
+          ports:
+          - containerPort: 8080

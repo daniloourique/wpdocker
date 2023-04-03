@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: daniloouriquewpdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daniloouriquewpdocker
+  template:
+    metadata:
+      labels:
+        app: daniloouriquewpdocker 
+    spec:
+      containers:
+        - name: daniloouriquewpdocker 
+          image: aksacr0001.azurecr.io/daniloouriquewpdocker
+          ports:
+          - containerPort: 80
